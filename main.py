@@ -15,7 +15,7 @@ def default_preprocessing(df):
     return df
 
 
-class MetaDataset(StandardDataset):
+class Meta_Dataset(StandardDataset):
 
     def __init__(self, label_name='image', favorable_classes=[1],
                  protected_attribute_names=[],
@@ -35,7 +35,7 @@ class MetaDataset(StandardDataset):
             import sys
             sys.exit(1)
 
-        super(MetaDataset, self).__init__(df=df, label_name=label_name,
+        super(Meta_Dataset, self).__init__(df=df, label_name=label_name,
                                           favorable_classes=favorable_classes,
                                           protected_attribute_names=protected_attribute_names,
                                           privileged_classes=privileged_classes,
